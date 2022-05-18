@@ -1,0 +1,26 @@
+apiVersion: v2
+description: A Weaveworks Helm chart for Kubegres
+name: kubegres
+appVersion: "1.0"
+version: 0.1.0
+kubeVersion: ">=1.16.0-0"
+type: application
+home: https://github.com/weaveworks/profiles-catalog
+sources:
+  - https://github.com/reactive-tech/kubegres
+
+keywords:
+- database
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": kubegres
+  "weave.works/layer": layer-2
+  "weave.works/category": Database
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Upstream Project
+      url: https://github.com/reactive-tech/kubegres
