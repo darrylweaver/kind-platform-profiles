@@ -40,6 +40,45 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/cert-manager-1.0.1/cert-manager-1.0.1.tgz
     version: 1.0.1
+  - annotations:
+      weave.works/category: Certificate
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.jetstack.io
+        - name: Upstream Project
+          url: https://github.com/jetstack/cert-manager
+      weave.works/operator: "true"
+      weave.works/profile: cert-manager
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+    apiVersion: v2
+    created: "2022-08-12T17:08:17.33725568Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 1.6.0
+    description: A Weaveworks Helm chart for the Certificate Profile
+    digest: f396c4a3bb7813394dce7ab491f9b90d15693eb37f7fd6ed5b510f9d80c12649
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: cert-manager
+    sources:
+    - https://charts.jetstack.io
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/cert-manager-0.0.7/cert-manager-0.0.7.tgz
+    version: 0.0.7
   ingress-nginx:
   - annotations:
       weave.works/category: Ingress
@@ -177,4 +216,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-05-16T22:58:10.215253565Z"
+generated: "2022-08-12T17:08:17.33727228Z"
