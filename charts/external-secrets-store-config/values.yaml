@@ -1,5 +1,20 @@
 # Create kind: ClusterSecretStore resources
 clusterSecretStores:
+  aws-secrets-manager:
+     provider:
+       aws:
+         service: SecretsManager
+         region: eu-central-1
+         auth:
+           secretRef:
+             accessKeyIDSecretRef:
+               name: awssm-secret
+               key: access-key
+             secretAccessKeySecretRef:
+               name: awssm-secret
+               key: secret-access-key
+# Create kind: SecretStore resources
+secretStores:
   # vault-cluster:
   #   controller: dev
   #   provider:
@@ -12,23 +27,6 @@ clusterSecretStores:
   #             name: "vault-token-global"
   #             key: "token"
   #             namespace: external-secrets
-
-# Create kind: SecretStore resources
-secretStores:
-  # aws-secrets-manager:
-  #     controller: stg
-  #     provider:
-  #       aws:
-  #         service: SecretsManager
-  #         region: us-east-1
-  #         auth:
-  #           secretRef:
-  #             accessKeyIDSecretRef:
-  #               name: awssm-secret
-  #               key: access-key
-  #             secretAccessKeySecretRef:
-  #               name: awssm-secret
-  #               key: secret-access-key
 
 # Create kind: ExternalSecret
 secrets:

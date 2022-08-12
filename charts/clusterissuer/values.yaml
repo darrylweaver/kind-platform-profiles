@@ -1,0 +1,6 @@
+clusterissuer:
+  name: letsencrypt-prod
+  email: darrylweaver@gmail.com
+  server: https://acme-v02.api.letsencrypt.org/directory
+  secretKeyRef: letsencrypt-prod
+  cloudflareSecret: cloudflare-api-token-secret
