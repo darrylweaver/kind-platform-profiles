@@ -79,6 +79,42 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/cert-manager-0.0.7/cert-manager-0.0.7.tgz
     version: 0.0.7
+  clusterissuer:
+  - annotations:
+      weave.works/category: Certificate
+      weave.works/layer: layer-1
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.jetstack.io
+        - name: Upstream Project
+          url: https://github.com/jetstack/cert-manager
+      weave.works/operator: "false"
+      weave.works/profile: clusterissuer
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+    apiVersion: v2
+    created: "2022-08-12T20:42:00.582325338Z"
+    description: A Weaveworks Helm chart for a ClusterIssuer
+    digest: 0c79a9d3d37417ab658e46d20eb0ebb0d1ee4512be039e5f7bea6d1977d952a2
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: clusterissuer
+    sources:
+    - https://charts.jetstack.io
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/clusterissuer-0.0.1/clusterissuer-0.0.1.tgz
+    version: 0.0.1
   external-secrets:
   - annotations:
       weave.works/category: Secrets Management
@@ -121,6 +157,43 @@ entries:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/external-secrets-0.0.5/external-secrets-0.0.5.tgz
     version: 0.0.5
   ingress-nginx:
+  - annotations:
+      weave.works/category: Ingress
+      weave.works/layer: layer-2
+      weave.works/links: |
+        - name: Chart Sources
+          url:  https://kubernetes.github.io/ingress-nginx
+        - name: Upstream Project
+          url: https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx
+      weave.works/profile: ingress-nginx
+      weave.works/profile-ci: |
+        - "gke"
+    apiVersion: v2
+    created: "2022-08-12T20:42:00.714998117Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.1.0
+    description: A Weaveworks Helm chart for ingress-nginx
+    digest: 850cf24052fb50eb51e091690a89af15abe34f91ef9208de1e86c23a6f14a89b
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - network
+    - ingress
+    - nginx
+    - nginx-ingress
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: ingress-nginx
+    sources:
+    - https://kubernetes.github.io/ingress-nginx
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/ingress-nginx-1.0.3/ingress-nginx-1.0.3.tgz
+    version: 1.0.3
   - annotations:
       weave.works/category: Ingress
       weave.works/layer: layer-1
@@ -237,6 +310,47 @@ entries:
   prometheus:
   - annotations:
       weave.works/category: Observability
+      weave.works/layer: layer-3
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      weave.works/operator: "true"
+      weave.works/profile: prometheus
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+    apiVersion: v2
+    created: "2022-08-12T20:42:00.898225373Z"
+    dependencies:
+    - condition: kube-prometheus-stack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 19.2.2
+    description: A Weaveworks Helm chart for observability
+    digest: dfa7ca13305a60bd37923904075e5d5df0ef3e628cff81337d0dddfd95c0a057
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    - observability
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: prometheus
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/prometheus-1.0.2/prometheus-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      weave.works/category: Observability
       weave.works/layer: layer-1
       weave.works/links: |
         - name: Chart Sources
@@ -279,6 +393,38 @@ entries:
   secrets-store-config:
   - annotations:
       weave.works/category: Secrets Management
+      weave.works/layer: layer-1
+      weave.works/links: |
+        - name: Upstream Project
+          url: https://github.com/external-secrets/external-secrets
+      weave.works/profile: external-secrets-store-config
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+    apiVersion: v2
+    created: "2022-08-12T20:42:01.063210673Z"
+    description: A Weaveworks Helm chart to configure secret stores and secrets using
+      External Secrets Operator
+    digest: c881dc95b644967e49d293fa49168e7fcb2d75b89fa711a49a1c606243abf61b
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/external-secrets/external-secrets/main/assets/round_eso_logo.png
+    keywords:
+    - external-secrets
+    - secrets-manager
+    - parameter-store
+    - azure-key-vault
+    - vault
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: secrets-store-config
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/secrets-store-config-0.0.2/secrets-store-config-0.0.2.tgz
+    version: 0.0.2
+  - annotations:
+      weave.works/category: Secrets Management
       weave.works/layer: layer-4
       weave.works/links: |
         - name: Upstream Project
@@ -310,6 +456,34 @@ entries:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/secrets-store-config-0.0.1/secrets-store-config-0.0.1.tgz
     version: 0.0.1
   weave-policy-agent:
+  - annotations:
+      weave.works/category: Policy
+      weave.works/layer: layer-2
+      weave.works/links: |
+        - name: Upstream Project
+          url: https://github.com/weaveworks/policy-agent
+      weave.works/operator: "true"
+      weave.works/profile: weave-policy
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2022-08-12T20:42:01.225235981Z"
+    description: A Weaveworks Helm chart for Kubernetes to configure the policy agent
+    digest: 804b760f5b72be073f5635b1f26241d698a3b12d3caa76444f5692727c0e341a
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://www.magalix.com/hubfs/Imported%20images/logo-02.png%3Fwidth=560%26name=logo-02-Dec-18-2020-11-24-41-75-AM.png
+    keywords:
+    - policy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: weave-policy-agent
+    sources:
+    - https://github.com/weaveworks/policy-agent
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.2/weave-policy-agent-0.2.2.tgz
+    version: 0.2.2
   - annotations:
       weave.works/category: Policy
       weave.works/layer: layer-1
@@ -366,4 +540,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-08-12T20:15:46.60565236Z"
+generated: "2022-08-12T20:42:01.225261181Z"
