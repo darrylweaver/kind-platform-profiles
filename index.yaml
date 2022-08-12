@@ -92,6 +92,43 @@ entries:
       weave.works/profile-ci: |
         - "gke"
     apiVersion: v2
+    created: "2022-08-12T20:13:09.77884257Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.1.0
+    description: A Weaveworks Helm chart for ingress-nginx
+    digest: 3fbd2f07a00944faa22bcff3dceecb105168f22c68fd32981ac2ea08b3b92e1d
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - network
+    - ingress
+    - nginx
+    - nginx-ingress
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: ingress-nginx
+    sources:
+    - https://kubernetes.github.io/ingress-nginx
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/ingress-nginx-1.0.2/ingress-nginx-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      weave.works/category: Ingress
+      weave.works/layer: layer-1
+      weave.works/links: |
+        - name: Chart Sources
+          url:  https://kubernetes.github.io/ingress-nginx
+        - name: Upstream Project
+          url: https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx
+      weave.works/profile: ingress-nginx
+      weave.works/profile-ci: |
+        - "gke"
+    apiVersion: v2
     created: "2022-05-16T16:10:37.829041523Z"
     dependencies:
     - name: ingress-nginx
@@ -117,6 +154,45 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/ingress-nginx-1.0.1/ingress-nginx-1.0.1.tgz
     version: 1.0.1
+  metallb:
+  - annotations:
+      weave.works/category: Loadbalancer
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://metallb.github.io/metallb
+        - name: Upstream Project
+          url: https://github.com/metallb/metallb
+      weave.works/operator: "false"
+      weave.works/profile: metallb
+      weave.works/profile-ci: |
+        - "kind"
+    apiVersion: v2
+    created: "2022-08-12T20:13:09.915471068Z"
+    dependencies:
+    - name: metallb
+      repository: https://metallb.github.io/metallb
+      version: v0.12.1
+    description: A Weaveworks Helm chart for a network load-balancer implementation
+      for Kubernetes using standard routing protocols
+    digest: 6d8beda1574f728b9de6c8445ca0c49240e8ecc0aa58f6d7c4a3bb4ada61cab2
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://metallb.universe.tf/images/logo/metallb-white.png
+    keywords:
+    - metallb
+    - loadbalancer
+    - kind
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: metallb
+    sources:
+    - https://metallb.github.io/metallb
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/metallb-0.0.3/metallb-0.0.3.tgz
+    version: 0.0.3
   prometheus:
   - annotations:
       weave.works/category: Observability
@@ -216,4 +292,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-08-12T17:08:17.33727228Z"
+generated: "2022-08-12T20:13:09.915488268Z"
