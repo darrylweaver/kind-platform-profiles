@@ -7,17 +7,14 @@ kubeVersion: ">=1.12.0-r0"
 home: https://github.com/rancher/local-path-provisioner
 sources:
   - https://github.com/rancher/local-path-provisioner.git
-
 keywords:
 - local-path-provisioner
 - kind
 - storage
 - hostpath
-
 maintainers:
   - name: Weaveworks
     email: support@weave.works
-
 annotations:
   "weave.works/profile": local-path-provisioner
   "weave.works/category": Storage
@@ -29,4 +26,3 @@ annotations:
       url: https://github.com/rancher/local-path-provisioner.git
   "weave.works/profile-ci": |
     - "kind"
-
