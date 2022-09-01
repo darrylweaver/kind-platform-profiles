@@ -115,6 +115,54 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/clusterissuer-0.0.1/clusterissuer-0.0.1.tgz
     version: 0.0.1
+  elk-stack:
+  - annotations:
+      weave.works/category: Deployment
+      weave.works/layer: layer-2
+      weave.works/links: |
+        - name: Chart Sources
+          url:  https://helm.elastic.co
+        - name: Upstream Project
+          url: https://github.com/elastic/helm-charts
+      weave.works/profile: elk-stack
+      weave.works/profile-ci: |
+        - "gke"
+    apiVersion: v2
+    created: "2022-09-01T22:12:45.545438232Z"
+    dependencies:
+    - name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - name: kibana
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - name: metricbeat
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - name: filebeat
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    description: A Weaveworks Helm chart for the ELK Stack Profile
+    digest: 67fbc9dec38e3f437a09ff91f6f72eebc0dc59e4c788eca18394010340e9a246
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt74acb493aaf69084/5ea8c8dbf5880355558334cd/brand-elastic-stack-220x130.svg
+    keywords:
+    - network
+    - canary
+    - deployment
+    - elk-stack
+    - elastic
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: elk-stack
+    sources:
+    - https://Helm.elastic.co
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/elk-stack-0.0.9/elk-stack-0.0.9.tgz
+    version: 0.0.9
   external-secrets:
   - annotations:
       weave.works/category: Secrets Management
@@ -572,4 +620,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-08-12T23:05:43.489898101Z"
+generated: "2022-09-01T22:12:45.545476932Z"
