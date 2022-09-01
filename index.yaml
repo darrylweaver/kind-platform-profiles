@@ -316,6 +316,40 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/ingress-nginx-1.0.1/ingress-nginx-1.0.1.tgz
     version: 1.0.1
+  local-path-provisioner:
+  - annotations:
+      weave.works/category: Storage
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://github.com/rancher/local-path-provisioner.git
+        - name: Upstream Project
+          url: https://github.com/rancher/local-path-provisioner.git
+      weave.works/profile: local-path-provisioner
+      weave.works/profile-ci: |
+        - "kind"
+    apiVersion: v1
+    appVersion: v0.0.22-dev
+    created: "2022-09-01T23:08:23.118314354Z"
+    description: Weaveworks profile for HostPath for persistent local storage with
+      Kubernetes based on Rancher
+    digest: 3b3c9094ef3c43a3fa662bc2ac723c344f1f8681d5a2f1cd7579c4d871123466
+    home: https://github.com/rancher/local-path-provisioner
+    keywords:
+    - local-path-provisioner
+    - kind
+    - storage
+    - hostpath
+    kubeVersion: '>=1.12.0-r0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: local-path-provisioner
+    sources:
+    - https://github.com/rancher/local-path-provisioner.git
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/local-path-provisioner-0.0.1/local-path-provisioner-0.0.1.tgz
+    version: 0.0.1
   metallb:
   - annotations:
       weave.works/category: Loadbalancer
@@ -620,4 +654,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-09-01T22:12:45.545476932Z"
+generated: "2022-09-01T23:08:23.118340955Z"
