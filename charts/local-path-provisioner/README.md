@@ -60,7 +60,7 @@ default values.
 | `image.pullPolicy`                  | Image pull policy                                                               | `IfNotPresent`                                                                      |
 | `storageClass.create`               | If true, create a `StorageClass`                                                | `true`                                                                              |
 | `storageClass.provisionerName`      | The provisioner name for the storage class                                      | `nil`                                                                               |
-| `storageClass.defaultClass`         | If true, set the created `StorageClass` as the cluster's default `StorageClass` | `false`                                                                             |
+| `storageClass.defaultClass`         | If true, set the created `StorageClass` as the cluster's default `StorageClass` | `true`                                                                             |
 | `storageClass.name`                 | The name to assign the created StorageClass                                     | local-path                                                                          |
 | `storageClass.reclaimPolicy`        | ReclaimPolicy field of the class                                                | Delete                                                                              |
 | `nodePathMap`                       | Configuration of where to store the data on each node                           | `[{node: DEFAULT_PATH_FOR_NON_LISTED_NODES, paths: [/opt/local-path-provisioner]}]` |
