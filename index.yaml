@@ -94,6 +94,41 @@ entries:
         - "gke"
         - "kind"
     apiVersion: v2
+    created: "2022-09-11T23:04:48.780858452Z"
+    description: A Weaveworks Helm chart for a ClusterIssuer
+    digest: 1aeb6a3e907c2fff91524e1101043a7051e9d81feec20fdec90e33aaf17b32ed
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: clusterissuer
+    sources:
+    - https://charts.jetstack.io
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/clusterissuer-0.0.2/clusterissuer-0.0.2.tgz
+    version: 0.0.2
+  - annotations:
+      weave.works/category: Certificate
+      weave.works/layer: layer-1
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.jetstack.io
+        - name: Upstream Project
+          url: https://github.com/jetstack/cert-manager
+      weave.works/operator: "false"
+      weave.works/profile: clusterissuer
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+    apiVersion: v2
     created: "2022-08-12T20:42:00.582325338Z"
     description: A Weaveworks Helm chart for a ClusterIssuer
     digest: 0c79a9d3d37417ab658e46d20eb0ebb0d1ee4512be039e5f7bea6d1977d952a2
@@ -724,4 +759,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-09-02T09:16:42.084514666Z"
+generated: "2022-09-11T23:04:48.780891753Z"
