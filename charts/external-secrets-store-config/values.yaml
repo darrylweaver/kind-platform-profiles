@@ -9,9 +9,11 @@ clusterSecretStores:
            secretRef:
              accessKeyIDSecretRef:
                name: awssm-secret
+               namespace: flux-system
                key: access-key
              secretAccessKeySecretRef:
                name: awssm-secret
+               namespace: flux-system
                key: secret-access-key
 # Create kind: SecretStore resources
 secretStores:
@@ -29,9 +31,12 @@ secretStores:
   #             namespace: external-secrets
 
 # Create kind: ExternalSecret
-secrets:
-  example-secret:
+clusterSecrets:
+  cert-manager-cloudflare:
     refreshInterval: 1h
+    namespaceSelector:
+      matchLabels: 
+        name: cert-manager
     secretStoreRef:
       name: aws-secrets-manager
       kind: SecretStore
