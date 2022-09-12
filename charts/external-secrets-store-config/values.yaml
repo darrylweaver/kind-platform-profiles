@@ -41,7 +41,7 @@ clusterSecrets:
       refreshInterval: "1h"
       secretStoreRef:
         name: aws-secrets-manager
-        kind: SecretStore
+        kind: ClusterSecretStore
       target:
         name: cloudflare_api_token
         creationPolicy: Owner
