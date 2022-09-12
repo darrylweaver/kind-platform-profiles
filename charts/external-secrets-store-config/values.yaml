@@ -33,17 +33,19 @@ secretStores:
 # Create kind: ExternalSecret
 clusterSecrets:
   cert-manager-cloudflare:
-    refreshInterval: 1h
+    refreshTime: 1h
     namespaceSelector:
-      matchLabels: 
+      matchLabels:
         name: cert-manager
-    secretStoreRef:
-      name: aws-secrets-manager
-      kind: SecretStore
-    target:
-      name: cloudflare_api_token
-      creationPolicy: Owner
-    data:
-    - secretKey: cloudflare_api_token
-      remoteRef:
-        key: darrylweaver/kind-wge-demo/cloudflare_api_token
+    externalSecretSpec:
+      refreshInterval: "1h"
+      secretStoreRef:
+        name: aws-secrets-manager
+        kind: SecretStore
+      target:
+        name: cloudflare_api_token
+        creationPolicy: Owner
+      data:
+      - secretKey: cloudflare_api_token
+        remoteRef:
+          key: darrylweaver/kind-wge-demo/cloudflare_api_token
