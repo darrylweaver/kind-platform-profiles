@@ -6,18 +6,15 @@ type: application
 version: 0.0.5
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/weaveworks/profiles-catalog
-
 keywords:
 - external-secrets
 - secrets-manager
 - parameter-store
 - azure-key-vault
 - vault
-
 maintainers:
 - name: Weaveworks
   email: support@weave.works
-
 annotations:
   "weave.works/profile": external-secrets-store-config
   "weave.works/category": Secrets Management
