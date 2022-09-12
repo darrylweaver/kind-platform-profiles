@@ -1,20 +1,20 @@
 # Create kind: ClusterSecretStore resources
 clusterSecretStores:
   aws-secrets-manager:
-     provider:
-       aws:
-         service: SecretsManager
-         region: eu-central-1
-         auth:
-           secretRef:
-             accessKeyIDSecretRef:
-               name: awssm-secret
-               namespace: flux-system
-               key: access-key
-             secretAccessKeySecretRef:
-               name: awssm-secret
-               namespace: flux-system
-               key: secret-access-key
+    provider:
+      aws:
+        service: SecretsManager
+        region: eu-central-1
+        auth:
+          secretRef:
+            accessKeyIDSecretRef:
+              name: awssm-secret
+              namespace: flux-system
+              key: access-key
+            secretAccessKeySecretRef:
+              name: awssm-secret
+              namespace: flux-system
+              key: secret-access-key
 # Create kind: SecretStore resources
 secretStores:
   # vault-cluster:
@@ -46,6 +46,6 @@ clusterSecrets:
         name: cloudflare_api_token
         creationPolicy: Owner
       data:
-      - secretKey: cloudflare_api_token
-        remoteRef:
-          key: darrylweaver/kind-wge-demo/cloudflare_api_token
+        - secretKey: cloudflare_api_token
+          remoteRef:
+            key: darrylweaver/kind-wge-demo/cloudflare_api_token
