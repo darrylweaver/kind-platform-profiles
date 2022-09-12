@@ -627,6 +627,36 @@ entries:
       weave.works/profile: external-secrets-store-config
       weave.works/profile-ci: ""
     apiVersion: v2
+    created: "2022-09-12T01:12:29.554881673Z"
+    description: A Weaveworks Helm chart to configure secret stores and secrets using
+      External Secrets Operator
+    digest: 3381b2baf394b868e7ade04d4f9aae68d2e300185c7c3963b8c1e2a2f383e64a
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/external-secrets/external-secrets/main/assets/round_eso_logo.png
+    keywords:
+    - external-secrets
+    - secrets-manager
+    - parameter-store
+    - azure-key-vault
+    - vault
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: secrets-store-config
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/secrets-store-config-0.0.7/secrets-store-config-0.0.7.tgz
+    version: 0.0.7
+  - annotations:
+      weave.works/category: Secrets Management
+      weave.works/layer: layer-1
+      weave.works/links: |
+        - name: Upstream Project
+          url: https://github.com/external-secrets/external-secrets
+      weave.works/profile: external-secrets-store-config
+      weave.works/profile-ci: ""
+    apiVersion: v2
     created: "2022-09-12T00:58:53.133686988Z"
     description: A Weaveworks Helm chart to configure secret stores and secrets using
       External Secrets Operator
@@ -893,4 +923,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-09-12T00:58:53.133738988Z"
+generated: "2022-09-12T01:12:29.555047275Z"
