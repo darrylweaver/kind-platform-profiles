@@ -43,7 +43,7 @@ clusterSecrets:
         name: aws-secrets-manager
         kind: ClusterSecretStore
       target:
-        name: cloudflare_api_token
+        name: cloudflare-api-token-secret
         creationPolicy: Owner
       data:
         - secretKey: cloudflare_api_token
