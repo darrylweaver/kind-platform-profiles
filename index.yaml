@@ -586,6 +586,47 @@ entries:
         - "gke"
         - "kind"
     apiVersion: v2
+    created: "2022-10-04T10:05:01.43474868Z"
+    dependencies:
+    - condition: kube-prometheus-stack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 19.3.0
+    description: A Weaveworks Helm chart for observability
+    digest: d52def9a90eee33c9b4c847bed792934ed61e85f2f87ca09c816ae239aa9c9db
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    - observability
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: prometheus
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/prometheus-1.1.0/prometheus-1.1.0.tgz
+    version: 1.1.0
+  - annotations:
+      weave.works/category: Observability
+      weave.works/layer: layer-3
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      weave.works/operator: "true"
+      weave.works/profile: prometheus
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+    apiVersion: v2
     created: "2022-08-12T20:42:00.898225373Z"
     dependencies:
     - condition: kube-prometheus-stack.enabled
@@ -990,4 +1031,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-10-04T10:04:44.827089902Z"
+generated: "2022-10-04T10:05:01.435111678Z"
