@@ -21,18 +21,15 @@ kubeVersion: ">=1.16.0-0"
 home: https://github.com/weaveworks/profiles-catalog
 sources:
   - https://Helm.elastic.co
-
 keywords:
 - network
 - canary
 - deployment
 - elk-stack
 - elastic
-
 maintainers:
   - name: Weaveworks
     email: support@weave.works
-
 annotations:
   "weave.works/profile": elk-stack
   "weave.works/category": Deployment
