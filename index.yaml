@@ -15,45 +15,6 @@ entries:
         - "gke"
         - "kind"
     apiVersion: v2
-    created: "2022-10-04T10:04:34.391601445Z"
-    dependencies:
-    - name: cert-manager
-      repository: https://charts.jetstack.io
-      version: v1.9.1
-    description: A Weaveworks Helm chart for the Certificate Profile
-    digest: 3bd56280121aadc5136fe816be28a64a278fe31432a734186866d4abbe4d2f80
-    home: https://github.com/weaveworks/profiles-catalog
-    icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
-    keywords:
-    - cert-manager
-    - kube-lego
-    - letsencrypt
-    - tls
-    kubeVersion: '>=1.16.0-0'
-    maintainers:
-    - email: support@weave.works
-      name: Weaveworks
-    name: cert-manager
-    sources:
-    - https://charts.jetstack.io
-    type: application
-    urls:
-    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/cert-manager-1.0.2/cert-manager-1.0.2.tgz
-    version: 1.0.2
-  - annotations:
-      weave.works/category: Certificate
-      weave.works/layer: layer-0
-      weave.works/links: |
-        - name: Chart Sources
-          url: https://charts.jetstack.io
-        - name: Upstream Project
-          url: https://github.com/jetstack/cert-manager
-      weave.works/operator: "true"
-      weave.works/profile: cert-manager
-      weave.works/profile-ci: |
-        - "gke"
-        - "kind"
-    apiVersion: v2
     created: "2022-05-16T16:10:37.712892388Z"
     dependencies:
     - name: cert-manager
@@ -319,6 +280,43 @@ entries:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/external-secrets-0.0.5/external-secrets-0.0.5.tgz
     version: 0.0.5
   ingress-nginx:
+  - annotations:
+      weave.works/category: Ingress
+      weave.works/layer: layer-2
+      weave.works/links: |
+        - name: Chart Sources
+          url:  https://kubernetes.github.io/ingress-nginx
+        - name: Upstream Project
+          url: https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx
+      weave.works/profile: ingress-nginx
+      weave.works/profile-ci: |
+        - "gke"
+    apiVersion: v2
+    created: "2022-10-04T10:04:44.826883061Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.2.5
+    description: A Weaveworks Helm chart for ingress-nginx
+    digest: f52cad18adcb3ee04727e8b65a9f9152e38fbcf37abc1b8a1e2d549b16337783
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - network
+    - ingress
+    - nginx
+    - nginx-ingress
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: ingress-nginx
+    sources:
+    - https://kubernetes.github.io/ingress-nginx
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/ingress-nginx-1.0.4/ingress-nginx-1.0.4.tgz
+    version: 1.0.4
   - annotations:
       weave.works/category: Ingress
       weave.works/layer: layer-2
@@ -992,4 +990,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-10-04T10:04:34.391654045Z"
+generated: "2022-10-04T10:04:44.827089902Z"
