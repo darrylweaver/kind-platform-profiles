@@ -69,7 +69,7 @@ elasticsearch:
 
   extraInitContainers:
   - name: setup-tls-cert
-    image: "docker.elastic.co/elasticsearch/elasticsearch:7.17.6"
+    image: "docker.elastic.co/elasticsearch/elasticsearch:8.4.2"
     command:
     - sh
     - -c
