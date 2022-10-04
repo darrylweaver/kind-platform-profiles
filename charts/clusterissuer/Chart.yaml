@@ -1,13 +1,9 @@
 apiVersion: v2
-name: cert-manager
+name: clusterissuer
 icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
-description: A Weaveworks Helm chart for the Certificate Profile
+description: A Weaveworks Helm chart for a ClusterIssuer
 type: application
-version: 0.0.7
-dependencies:
-  - name: cert-manager
-    version: "1.6.0"
-    repository: "https://charts.jetstack.io"
+version: 0.0.2
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/weaveworks/profiles-catalog
 sources:
@@ -24,10 +20,10 @@ maintainers:
     email: support@weave.works
 
 annotations:
-  "weave.works/profile": cert-manager
+  "weave.works/profile": clusterissuer
   "weave.works/category": Certificate
-  "weave.works/layer": layer-0
-  "weave.works/operator": "true"
+  "weave.works/layer": layer-1
+  "weave.works/operator": "false"
   "weave.works/links": |
     - name: Chart Sources
       url: https://charts.jetstack.io

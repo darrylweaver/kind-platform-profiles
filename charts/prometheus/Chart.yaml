@@ -20,7 +20,7 @@ annotations:
   "weave.works/profile": prometheus
   "weave.works/category": Observability
   "weave.works/operator": "true"
-  "weave.works/layer": layer-1
+  "weave.works/layer": layer-3
   "weave.works/links": |
     - name: Chart Sources
       url: https://github.com/prometheus-community/helm-charts

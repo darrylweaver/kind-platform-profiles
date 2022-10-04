@@ -1,0 +1,51 @@
+# Create kind: ClusterSecretStore resources
+clusterSecretStores:
+  aws-secrets-manager:
+    provider:
+      aws:
+        service: SecretsManager
+        region: eu-central-1
+        auth:
+          secretRef:
+            accessKeyIDSecretRef:
+              name: awssm-secret
+              namespace: flux-system
+              key: access-key
+            secretAccessKeySecretRef:
+              name: awssm-secret
+              namespace: flux-system
+              key: secret-access-key
+# Create kind: SecretStore resources
+secretStores:
+  # vault-cluster:
+  #   controller: dev
+  #   provider:
+  #     vault:
+  #         server: "https://vault.your-domain.com"
+  #         path: secret
+  #         version: v2
+  #         auth:
+  #           tokenSecretRef:
+  #             name: "vault-token-global"
+  #             key: "token"
+  #             namespace: external-secrets
+
+# Create kind: ExternalSecret
+clusterSecrets:
+  cert-manager-cloudflare:
+    refreshTime: 1h
+    namespaceSelector:
+      matchLabels:
+        name: cert-manager
+    externalSecretSpec:
+      refreshInterval: "1h"
+      secretStoreRef:
+        name: aws-secrets-manager
+        kind: ClusterSecretStore
+      target:
+        name: cloudflare-api-token-secret
+        creationPolicy: Owner
+      data:
+        - secretKey: cloudflare_api_token
+          remoteRef:
+            key: darrylweaver/kind-wge-demo/cloudflare_api_token
