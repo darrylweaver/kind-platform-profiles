@@ -680,6 +680,47 @@ entries:
         - "gke"
         - "kind"
     apiVersion: v2
+    created: "2022-10-05T20:33:58.976104738Z"
+    dependencies:
+    - condition: kube-prometheus-stack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 40.3.1
+    description: A Weaveworks Helm chart for observability
+    digest: d506bdcaed181265aeb52e039580d036eeb43a43ee5867f217b58bb523c3098f
+    home: https://github.com/weaveworks/profiles-catalog
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    - observability
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: prometheus
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/darrylweaver/kind-platform-profiles/releases/download/prometheus-1.2.1/prometheus-1.2.1.tgz
+    version: 1.2.1
+  - annotations:
+      weave.works/category: Observability
+      weave.works/layer: layer-3
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      weave.works/operator: "true"
+      weave.works/profile: prometheus
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+    apiVersion: v2
     created: "2022-10-04T20:53:17.198644322Z"
     dependencies:
     - condition: kube-prometheus-stack.enabled
@@ -1207,4 +1248,4 @@ entries:
     urls:
     - https://github.com/darrylweaver/kind-platform-profiles/releases/download/weave-policy-agent-0.2.0/weave-policy-agent-0.2.0.tgz
     version: 0.2.0
-generated: "2022-10-04T20:53:17.198946323Z"
+generated: "2022-10-05T20:33:58.976191196Z"
