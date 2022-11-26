@@ -9,7 +9,7 @@ dependencies:
   version: "7.17.3"
   repository: "https://helm.elastic.co"
 - name: kibana
-  version: "7.17.3"
+  version: "8.5.1"
   repository: "https://helm.elastic.co"
 - name: metricbeat
   version: "7.17.3"
