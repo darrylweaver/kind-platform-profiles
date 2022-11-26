@@ -4,12 +4,12 @@ dependencies:
   version: 7.17.3
 - name: kibana
   repository: https://helm.elastic.co
-  version: 7.17.3
+  version: 8.5.1
 - name: metricbeat
   repository: https://helm.elastic.co
   version: 7.17.3
 - name: filebeat
   repository: https://helm.elastic.co
   version: 7.17.3
-digest: sha256:3ae9d28404180e0920cd7f6c84f6401348f55b9c64dbd23c9b491a34747cccb2
-generated: "2022-09-01T18:08:56.696158059+01:00"
+digest: sha256:eafafa5afb4084734e06978aca9c13f4cd4a83e3b58e848f771918cbc6eae48d
+generated: "2022-11-26T00:03:18.495951334Z"
