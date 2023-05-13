@@ -6,7 +6,7 @@ type: application
 version: 1.0.2
 dependencies:
   - name: cert-manager
-    version: "v1.9.1"
+    version: "v1.11.2"
     repository: "https://charts.jetstack.io"
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/weaveworks/profiles-catalog
